@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 
+
+
+
+<!--
+	
+	Since you are looking at the code-base , it means you liked my webpage . Kindly let me now about it with your review. It helps me going and developing new things :).
+
+	- Mohit Chandra
+	
+-->
+
+
+
+
+
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
@@ -7,6 +22,8 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="en"> <!--<![endif]-->
 <html>
 <head>
+
+
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -31,6 +48,25 @@
 	<meta name="description" content="The portfolio of Mohit Chandra, Computer Science Undergraduate at IIIT-Hyderabad" />
 	<meta name="keywords" content="mohit, chandra, Mohit Chandra, IIIT-Hyderabad, IIIT Hyderabad, IIIT-H, developer, Mohit" />
 	<meta name="robots" content="index, follow" />
+
+
+<script>
+	$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);											
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');						// code for making the scrolling smooth
+      if (target.length) {												// click the link to jump on the link
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 0950);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
 
 <style>
 	
@@ -155,23 +191,39 @@
 	.jumbotron{
 		height: 100vh;
 		width: 100vw;
-		background-image: url("night.jpeg");
+		background: url('night.jpeg') 50% 0 no-repeat fixed;
 		background-size: cover;
-		background-repeat: no-repeat;
 	}
 
 	#pic{
 		position: absolute;
 	    left: 50%;
-	    top: 30%;
+	    top: 35%;
 	    bottom: auto;
 	    right: auto;
-	    -webkit-transform: translateX(-50%) translateY(-30%);
-	    -moz-transform: translateX(-50%) translateY(-30%);
-	    -ms-transform: translateX(-50%) translateY(-30%);
-	    -o-transform: translateX(-50%) translateY(-30%);
-	    transform: translateX(-50%) translateY(-30%);
+	    -webkit-transform: translateX(-50%) translateY(-35%);
+	    -moz-transform: translateX(-50%) translateY(-35%);
+	    -ms-transform: translateX(-50%) translateY(-35%);
+	    -o-transform: translateX(-50%) translateY(-35%);
+	    transform: translateX(-50%) translateY(-35%);
 	    text-align: center;
+	}
+
+	.contact{
+		position: absolute;
+	    left: 50%;
+	    top: 70%;
+	    bottom: auto;
+	    right: auto;
+	    -webkit-transform: translateX(-50%) translateY(-70%);
+	    -moz-transform: translateX(-50%) translateY(-70%);
+	    -ms-transform: translateX(-50%) translateY(-70%);
+	    -o-transform: translateX(-50%) translateY(-70%);
+	    transform: translateX(-50%) translateY(-70%);
+	    font-family: 'Raleway', sans-serif;
+	    text-align: center;
+
+
 	}
 
 
@@ -184,10 +236,16 @@
 	.img-circle {
     border-radius: 50%;
 }
+
+	#picco li{
+		display: inline;
+		margin-left: 1%; 
+	}
 </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
 <nav class="navbar navbar-mohit navbar-fixed-top">
   <div class="container">
     <ul class="nav navbar-nav navbar-right">
@@ -201,21 +259,34 @@
 <div class="jumbotron">
   <div class="container">
     
-    <div class="col-md-4 col-sm-4"></div>
-    <div class="col-md-4 col-sm-4" id="pic">
-    	<img class='img-circle' src='mohit.jpg' height="50%" width="50%" />
+    <div class="col-md-4 col-sm-3"></div>
+    <div class="col-md-4 col-sm-6" id="pic">
+    	<img class='img-circle' src='mohit.jpg' height="40%" width="40%" />
     </div>
-    <div class="col-md-4 col-sm-4"></div>
+    <div class="col-md-4 col-sm-3"></div>
   </div>
-
-  <div class="main col-md-12 col-sm-12">
-    Mohit Chandra
-    </div>
 
     <div class="main col-md-12 col-sm-12" id="tagline">
     Will Code for Food :)
     </div>
+
+    <div class="contact col-md-2 col-sm-2">
+    </div>
+
+    <div class="contact col-md-7 col-sm-7">
+    <ul id="picco">
+    <li><a href="https://www.quora.com/profile/Mohit-Chandra-10"><img class='img-circle' src='Quora.png' height="6%" width="6%" /></a> </li>
+    <li><a href="https://www.linkedin.com/in/mohit-chandra-a05508a6/"><img class='img-circle' src='Linkedin.png' height="6%" width="6%" /></a> </li>
+    <li><a href="https://github.com/mohit3011"><img class='img-circle' src='Github.png' height="6%" width="6%" /></a> </li>
+    <li><a href="https://github.com/mohit3011"><img class='img-circle' src='Facebook.png' height="6%" width="6%" /></a> </li>
+    <li><a href="https://github.com/mohit3011"><img class='img-circle' src='Instagram.png' height="6%" width="6%" /></a> </li>
+    </ul>
+    </div>
+
+    <div class="contact col-md-3 col-sm-3">
+    </div>
 </div>
+
 
 
 </body>
