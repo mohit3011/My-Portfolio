@@ -34,100 +34,155 @@
 
 <style>
 	
-	#main{
+	.main{
 		font-family: 'Raleway', sans-serif;
 		text-align: center;
 		font-size: 50px;
 	}
 
-.navbar-mohit {
-  background-color: #ffffff;
-  border-color: #e4f0e4;
-}
-.navbar-mohit .navbar-brand {
-  color: #45b29a;
-}
-.navbar-mohit .navbar-brand:hover,
-.navbar-mohit .navbar-brand:focus {
-  color: #1e836c;
-}
-.navbar-mohit .navbar-text {
-  color: #45b29a;
-}
-.navbar-mohit .navbar-nav > li > a {
-  color: #45b29a;
-}
-.navbar-mohit .navbar-nav > li > a:hover,
-.navbar-mohit .navbar-nav > li > a:focus {
-  color: #1e836c;
-}
-.navbar-mohit .navbar-nav > li > .dropdown-menu {
-  background-color: #ffffff;
-}
-.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a {
-  color: #45b29a;
-}
-.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a:hover,
-.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color: #1e836c;
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-nav > li > .dropdown-menu > li > .divider {
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a,
-.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:hover,
-.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:focus {
-  color: #1e836c;
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-nav > .active > a,
-.navbar-mohit .navbar-nav > .active > a:hover,
-.navbar-mohit .navbar-nav > .active > a:focus {
-  color: #1e836c;
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-nav > .open > a,
-.navbar-mohit .navbar-nav > .open > a:hover,
-.navbar-mohit .navbar-nav > .open > a:focus {
-  color: #1e836c;
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-toggle {
-  border-color: #e4f0e4;
-}
-.navbar-mohit .navbar-toggle:hover,
-.navbar-mohit .navbar-toggle:focus {
-  background-color: #e4f0e4;
-}
-.navbar-mohit .navbar-toggle .icon-bar {
-  background-color: #45b29a;
-}
-.navbar-mohit .navbar-collapse,
-.navbar-mohit .navbar-form {
-  border-color: #45b29a;
-}
-.navbar-mohit .navbar-link {
-  color: #45b29a;
-}
-.navbar-mohit .navbar-link:hover {
-  color: #1e836c;
+	#tagline
+	{
+		color: white;
+		position: absolute;
+	    left: 50%;
+	    top: 60%;
+	    bottom: auto;
+	    right: auto;
+	    -webkit-transform: translateX(-50%) translateY(-60%);
+	    -moz-transform: translateX(-50%) translateY(-60%);
+	    -ms-transform: translateX(-50%) translateY(-60%);
+	    -o-transform: translateX(-50%) translateY(-60%);
+	    transform: translateX(-50%) translateY(-60%);
+	    text-align: center;
+	}
+
+	.navbar-mohit {
+	  background-color: #ffffff;
+	  border-color: #e4f0e4;
+	  margin-bottom: 0;
+	}
+	.navbar-mohit .navbar-brand {
+	  color: #45b29a;
+	}
+	.navbar-mohit .navbar-brand:hover,
+	.navbar-mohit .navbar-brand:focus {
+	  color: #1e836c;
+	}
+	.navbar-mohit .navbar-text {
+	  color: #45b29a;
+	}
+	.navbar-mohit .navbar-nav > li > a {
+	  color: #45b29a;
+	}
+	.navbar-mohit .navbar-nav > li > a:hover,
+	.navbar-mohit .navbar-nav > li > a:focus {
+	  color: #1e836c;
+	}
+	.navbar-mohit .navbar-nav > li > .dropdown-menu {
+	  background-color: #ffffff;
+	}
+	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a {
+	  color: #45b29a;
+	}
+	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a:hover,
+	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a:focus {
+	  color: #1e836c;
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > .divider {
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:focus {
+	  color: #1e836c;
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-nav > .active > a,
+	.navbar-mohit .navbar-nav > .active > a:hover,
+	.navbar-mohit .navbar-nav > .active > a:focus {
+	  color: #1e836c;
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-nav > .open > a,
+	.navbar-mohit .navbar-nav > .open > a:hover,
+	.navbar-mohit .navbar-nav > .open > a:focus {
+	  color: #1e836c;
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-toggle {
+	  border-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-toggle:hover,
+	.navbar-mohit .navbar-toggle:focus {
+	  background-color: #e4f0e4;
+	}
+	.navbar-mohit .navbar-toggle .icon-bar {
+	  background-color: #45b29a;
+	}
+	.navbar-mohit .navbar-collapse,
+	.navbar-mohit .navbar-form {
+	  border-color: #45b29a;
+	}
+	.navbar-mohit .navbar-link {
+	  color: #45b29a;
+	}
+	.navbar-mohit .navbar-link:hover {
+	  color: #1e836c;
+	}
+
+	@media (max-width: 767px) {
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a {
+	    color: #45b29a;
+	  }
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a:hover,
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a:focus {
+	    color: #1e836c;
+	  }
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a,
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:hover,
+	  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:focus {
+	    color: #1e836c;
+	    background-color: #e4f0e4;
+	  }
+	}
+
+	.mohit-li{
+		font-family: 'Raleway', sans-serif;
+		
+	}
+
+	.jumbotron{
+		height: 100vh;
+		width: 100vw;
+		background-image: url("night.jpeg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#pic{
+		position: absolute;
+	    left: 50%;
+	    top: 30%;
+	    bottom: auto;
+	    right: auto;
+	    -webkit-transform: translateX(-50%) translateY(-30%);
+	    -moz-transform: translateX(-50%) translateY(-30%);
+	    -ms-transform: translateX(-50%) translateY(-30%);
+	    -o-transform: translateX(-50%) translateY(-30%);
+	    transform: translateX(-50%) translateY(-30%);
+	    text-align: center;
+	}
+
+
+	#pic img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
-@media (max-width: 767px) {
-  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a {
-    color: #45b29a;
-  }
-  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-mohit .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #1e836c;
-  }
-  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #1e836c;
-    background-color: #e4f0e4;
-  }
+	.img-circle {
+    border-radius: 50%;
 }
 </style>
 </head>
@@ -136,12 +191,32 @@
 <nav class="navbar navbar-mohit navbar-fixed-top">
   <div class="container">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
+      <li class="mohit-li"><a href="#">Page 1</a></li>
+      <li class="mohit-li"><a href="#">Page 2</a></li>
+      <li class="mohit-li"><a href="#">Page 3</a></li>
     </ul>
   </div>
-</nav>  
+</nav> 
+
+<div class="jumbotron">
+  <div class="container">
+    
+    <div class="col-md-4 col-sm-4"></div>
+    <div class="col-md-4 col-sm-4" id="pic">
+    	<img class='img-circle' src='mohit.jpg' height="50%" width="50%" />
+    </div>
+    <div class="col-md-4 col-sm-4"></div>
+  </div>
+
+  <div class="main col-md-12 col-sm-12">
+    Mohit Chandra
+    </div>
+
+    <div class="main col-md-12 col-sm-12" id="tagline">
+    Will Code for Food :)
+    </div>
+</div>
+
 
 </body>
 </html>
