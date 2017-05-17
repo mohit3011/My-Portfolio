@@ -59,11 +59,49 @@
       if (target.length) {												// click the link to jump on the link
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 0950);
+        }, 1450);
         return false;
       }
     }
   });
+});
+</script>
+
+<script >
+  
+  $(function() {
+    
+    var $meters = $("#sk > div");
+    var $section = $('#skill');
+    var $queue = $({});
+    
+     function loadDaBars() {
+        $meters.each(function() {
+            var $el = $(this);
+            var origWidth = $el.width();
+            $el.width(0);
+            $queue.queue(function(next) {
+                $el.animate({width: origWidth}, 570, next);
+            });
+        });
+    }
+    
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $section.offset().top - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            loadDaBars();
+            // unbind event not to load scrolsl again
+            $(document).unbind('scroll');
+        }
+    });
+    
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
 });
 </script>
 
@@ -73,8 +111,7 @@
 	.main{
 		font-family: 'Raleway', sans-serif;
 		text-align: center;
-		font-size: 50px;
-		overflow: hidden;
+		font-size: 6vh;
 	}
 
 	#tagline
@@ -95,7 +132,7 @@
 	.navbar-mohit {
 	  background-color: #ffffff;
 	  border-color: #e4f0e4;
-	  margin-bottom: 0;
+	  margin-bottom: 0%;
 	}
 	.navbar-mohit .navbar-brand {
 	  color: #45b29a;
@@ -241,18 +278,47 @@
 		display: inline;
 		margin-left: 1%; 
 	}
+
+	#about{
+		word-wrap: break-word;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	h1{
+		font-family: 'Raleway', sans-serif;
+		font-size: 6vh;
+		text-align: center;
+		color: #1e836c;
+	}
+
+	#aboutp{
+		font-family: 'Raleway', sans-serif;
+		font-size: 2.8vh;
+		text-align: center;
+	}
+
+	#aboutps{
+		font-family: 'Raleway', sans-serif;
+		font-size: 2.8vh;
+		text-align: center;
+		margin-top: 4%;
+	}
+
+	#aboutme{
+		margin-bottom: 10%;
+	}
 </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar-mohit" data-offset="50">
 
 <nav class="navbar navbar-mohit navbar-fixed-top">
   <div class="container">
     <ul class="nav navbar-nav navbar-right">
-      <li class="mohit-li"><a href="#about">About Me</a></li>
-      <li class="mohit-li"><a href="#like">What I Like</a></li>
-      <li class="mohit-li"><a href="#work">My Works</a></li>
-      <li class="mohit-li"><a href="#skill">Skills</a></li>
+      <li class="mohit-li"><a href="#aboutme">About Me</a></li>
+      <li class="mohit-li"><a href="#whatIlike">What I Like</a></li>
+      <li class="mohit-li"><a href="#myworks">My Works</a></li>
+      <li class="mohit-li"><a href="#skills">Skills</a></li>
       <li class="mohit-li"><a href="#">Curriculum Vitae</a></li>
     
     </ul>
@@ -270,7 +336,7 @@
   </div>
 
     <div class="main col-md-12 col-sm-12" id="tagline">
-     Always Learning
+     Always Learning :)
     </div>
 
     <div class="contact col-md-2 col-sm-2">
@@ -291,18 +357,31 @@
 </div>
 
 <!-- About Me Section -->
-
+<br>
+<br>
 <section>
-	<div class="container">
+	<div class="container" id="aboutme">
 		<div class="col-md-1 col-sm-1">
 		</div>
-		<div class="col-md-8 col-sm-10">
-		
+		<div class="col-md-10 col-sm-10">
+			<h1>About Me</h1>
+			<br>
+			<p id="aboutp"> Hello, I'm Mohit Chandra , Third Year Computer Science Undergraduate at IIIT Hyderabad. Currently, I'm pursuing my research in Machine Learning at (ML Lab IIIT-H).</p>
+			<p id="aboutp">
+			I'm a person with variety of interests but still to find my passion. Some of my hobbies
+			</p>
+			<p id="aboutps">
+			Listening Music | Watching Football | Playing Badminton | Cooking | Sketching
+			</p>
+			<p id="aboutps">
+			I believe there's a lot to learn and explore.
+			</p>
 		</div>
 		<div class="col-md-1 col-sm-1">
 		</div>
 	</div>
 </section>
+
 
 
 
