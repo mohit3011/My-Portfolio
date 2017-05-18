@@ -23,7 +23,7 @@
 <html>
 <head>
 
-
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -50,60 +50,8 @@
 	<meta name="robots" content="index, follow" />
 
 
-<script>
-	$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);											
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');						// code for making the scrolling smooth
-      if (target.length) {												// click the link to jump on the link
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1450);
-        return false;
-      }
-    }
-  });
-});
-</script>
 
-<script >
-  
-  $(function() {
-    
-    var $meters = $("#sk > div");
-    var $section = $('#skill');
-    var $queue = $({});
-    
-     function loadDaBars() {
-        $meters.each(function() {
-            var $el = $(this);
-            var origWidth = $el.width();
-            $el.width(0);
-            $queue.queue(function(next) {
-                $el.animate({width: origWidth}, 570, next);
-            });
-        });
-    }
-    
-    $(document).bind('scroll', function(ev) {
-        var scrollOffset = $(document).scrollTop();
-        var containerOffset = $section.offset().top - window.innerHeight;
-        if (scrollOffset > containerOffset) {
-            loadDaBars();
-            // unbind event not to load scrolsl again
-            $(document).unbind('scroll');
-        }
-    });
-    
-});
-</script>
 
-<script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
-</script>
 
 
 <style>
@@ -305,12 +253,15 @@ $(document).ready(function(){
 	}
 
 	#aboutme{
-		margin-bottom: 10%;
+		margin-bottom: 4%;
+		margin-top: 6%;
 	}
+
+	
 </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar-mohit" data-offset="50">
+<body>
 
 <nav class="navbar navbar-mohit navbar-fixed-top">
   <div class="container">
@@ -359,8 +310,32 @@ $(document).ready(function(){
 <!-- About Me Section -->
 <br>
 <br>
+
 <section>
-	<div class="container" id="aboutme">
+	<div id="aboutme" class="container">
+		<div class="col-md-1 col-sm-1">
+		</div>
+		<div class="col-md-10 col-sm-10">
+			<h1>About Me</h1>
+			<br>
+			<p id="aboutp"> Hello, I'm Mohit Chandra , Third Year Computer Science Undergraduate at IIIT Hyderabad. Currently, I'm pursuing my research in Machine Learning at (ML Lab IIIT-H).</p>
+			<p id="aboutp">
+			I'm a person with variety of interests but still to find my passion. Some of my hobbies
+			</p>
+			<p id="aboutps">
+			Listening Music | Watching Football | Playing Badminton | Cooking | Sketching
+			</p>
+			<p id="aboutps">
+			I believe there's a lot to learn and explore.
+			</p>
+		</div>
+		<div class="col-md-1 col-sm-1">
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container" id="whatIlike">
 		<div class="col-md-1 col-sm-1">
 		</div>
 		<div class="col-md-10 col-sm-10">
@@ -385,5 +360,21 @@ $(document).ready(function(){
 
 
 
+<script>
+	$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 0900);
+        return false;
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>
