@@ -48,7 +48,15 @@
 	<meta name="keywords" content="mohit, chandra, Mohit Chandra, IIIT-Hyderabad, IIIT Hyderabad, IIIT-H, developer, Mohit" />
 	<meta name="robots" content="index, follow" />
 
+<script>
+	$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()*5);
+  });
+});
 
+</script>
 
 
 
@@ -139,8 +147,8 @@
 }
 
 	.navbar-mohit {
-	  background-color: #ffffff;
-	  border-color: #e4f0e4;
+	  background-color: transparent;
+	  
 	  margin-bottom: 0%;
 	}
 	.navbar-mohit .navbar-brand {
@@ -149,6 +157,7 @@
 	.navbar-mohit .navbar-brand:hover,
 	.navbar-mohit .navbar-brand:focus {
 	  color: #1e836c;
+	  transition: color 200ms linear;
 	}
 	.navbar-mohit .navbar-text {
 	  color: #45b29a;
@@ -159,10 +168,13 @@
 	.navbar-mohit .navbar-nav > li > a:hover,
 	.navbar-mohit .navbar-nav > li > a:focus {
 	  color: #1e836c;
+	  transition: color 200ms linear;
+
 	}
+	
 	.navbar-mohit .navbar-nav > li > .dropdown-menu {
-	  background-color: #ffffff;
-	}
+		  background-color: #ffffff;
+		}
 	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a {
 	  color: #45b29a;
 	}
@@ -170,21 +182,29 @@
 	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > a:focus {
 	  color: #1e836c;
 	  background-color: #e4f0e4;
+	  transition: background-color 200ms linear;
+
 	}
 	.navbar-mohit .navbar-nav > li > .dropdown-menu > li > .divider {
 	  background-color: #e4f0e4;
+	  transition: background-color 200ms linear;
+
 	}
 	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a,
 	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:hover,
 	.navbar-mohit .navbar-nav .open .dropdown-menu > .active > a:focus {
 	  color: #1e836c;
 	  background-color: #e4f0e4;
+	  transition: background-color 200ms linear;
+
 	}
 	.navbar-mohit .navbar-nav > .active > a,
 	.navbar-mohit .navbar-nav > .active > a:hover,
 	.navbar-mohit .navbar-nav > .active > a:focus {
 	  color: #1e836c;
 	  background-color: #e4f0e4;
+	  transition: background-color 200ms linear;
+
 	}
 	.navbar-mohit .navbar-nav > .open > a,
 	.navbar-mohit .navbar-nav > .open > a:hover,
@@ -198,19 +218,36 @@
 	.navbar-mohit .navbar-toggle:hover,
 	.navbar-mohit .navbar-toggle:focus {
 	  background-color: #e4f0e4;
+	  transition: background-color 200ms linear;
+
 	}
 	.navbar-mohit .navbar-toggle .icon-bar {
 	  background-color: #45b29a;
+
 	}
 	.navbar-mohit .navbar-collapse,
 	.navbar-mohit .navbar-form {
 	  border-color: #45b29a;
 	}
+	.navbar-fixed-top.scrolled {
+	  background-color: #ffffff !important;
+	  border-color: #e4f0e4;
+	  transition: background-color 300ms linear;
+	}
 	.navbar-mohit .navbar-link {
 	  color: #45b29a;
+
 	}
 	.navbar-mohit .navbar-link:hover {
 	  color: #1e836c;
+	  transition: color 200ms linear;
+
+	}
+
+	#mohli>a:focus,
+	#mohli>a:hover{
+		background-color: #eee;
+		transition: background-color 200ms linear;
 	}
 
 	@media (max-width: 767px) {
@@ -231,8 +268,9 @@
 
 	.mohit-li{
 		font-family: 'Raleway', sans-serif;
-		
+
 	}
+
 
 	.jumbotron{
 		height: 100vh;
@@ -331,11 +369,11 @@
 <nav class="navbar navbar-mohit navbar-fixed-top">
   <div class="container">
     <ul class="nav navbar-nav navbar-right">
-      <li class="mohit-li"><a href="#aboutmep">About Me</a></li>
-      <li class="mohit-li"><a href="#whatIlikep">What I Like &amp; Do</a></li>
-      <li class="mohit-li"><a href="#myworks">My Works</a></li>
-      <li class="mohit-li"><a href="#skills">Skills</a></li>
-      <li class="mohit-li"><a href="#">Curriculum Vitae</a></li>
+      <li class="mohit-li" id="mohli"><a href="#aboutmep">About Me</a></li>
+      <li class="mohit-li" id="mohli"><a href="#whatIlikep">What I Like &amp; Do</a></li>
+      <li class="mohit-li" id="mohli"><a href="#myworks">My Works</a></li>
+      <li class="mohit-li" id="mohli"><a href="#skills">Skills</a></li>
+      <li class="mohit-li" id="mohli"><a href="#">Curriculum Vitae</a></li>
     
     </ul>
   </div>
