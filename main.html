@@ -5,8 +5,9 @@
 
 <!--
 	
-	Since you are looking at the code-base , it means you liked my webpage . Kindly let me now about it with your review. It helps me going and developing new things :). BTW there's no template used here :p
+	The written code is not well structured coz, if it was hard for me to code then it should be hard for you to understand too , enjoy :p :p 
 
+	Btw , I have written an indented code for your ease xD 
 	
 -->
 
@@ -59,7 +60,13 @@
 </script>
 
 
-
+<script>
+	$(window).scroll(function(){
+    	var $nav = $(".navbar-fixed-top");
+    	$("#aboutme").css("opacity", 1 + $nav.height()/5.4 - $(this).scrollTop() / 115);
+    	
+  });
+</script>
 
 <style>
 	
@@ -354,12 +361,16 @@
 	
 	#aboutmep{
 		padding-top : 8%;
-		margin-bottom: 8%;		
+		margin-bottom: 3%;		
 	}
 
 	#whatIlikep{
 	padding-top : 8%;
-	margin-bottom: 8%;		
+	margin-bottom: 3%;		
+	}
+
+	#aboutme{
+		opacity: 1;
 	}
 
 
@@ -422,7 +433,7 @@
 			I'm a person with variety of interests but still to find my passion. Some of my hobbies
 			</p>
 			<p id="aboutps">
-			Listening Music | Watching Football | Playing Badminton | Cooking | Sketching
+			Listening to Music | Playing Badminton | Cooking | Watching Football | Sketching
 			</p>
 			<p id="aboutps">
 			I believe there's a lot to learn and explore.
