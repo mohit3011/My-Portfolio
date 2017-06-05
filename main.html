@@ -63,7 +63,9 @@
 <script>
 	$(window).scroll(function(){
     	var $nav = $(".navbar-fixed-top");
-    	$("#aboutme").css("opacity", 1 + $nav.height()/5.4 - $(this).scrollTop() / 115);
+    	$("#aboutme").css("opacity", 0 + $(this).scrollTop() / 950);
+    	$("#whatIlike").css("opacity", 0 + $(this).scrollTop()/1050 - $nav.height()/102);
+
     	
   });
 </script>
@@ -349,6 +351,13 @@
 		font-family: 'Raleway', sans-serif;
 		font-size: 2.8vh;
 		text-align: center;
+		line-height: 5.2vh;
+	}
+
+	#likep{
+		font-family: 'Raleway', sans-serif;
+		font-size: 2.8vh;
+		line-height: 5.2vh;
 	}
 
 	#aboutps{
@@ -370,8 +379,13 @@
 	}
 
 	#aboutme{
-		opacity: 1;
+		opacity: 0;
 	}
+
+	#whatIlike{
+		opacity: 0;
+	}
+
 
 
 </style>
@@ -383,7 +397,7 @@
   <div class="container">
     <ul class="nav navbar-nav navbar-right">
       <li class="mohit-li" id="mohli"><a href="#aboutmep">About Me</a></li>
-      <li class="mohit-li" id="mohli"><a href="#whatIlikep">What I Like &amp; Do</a></li>
+      <li class="mohit-li" id="mohli"><a href="#whatIlikep">What I Like</a></li>
       <li class="mohit-li" id="mohli"><a href="#myworks">My Works</a></li>
       <li class="mohit-li" id="mohli"><a href="#skills">Skills</a></li>
       <li class="mohit-li" id="mohli"><a href="#">Curriculum Vitae</a></li>
@@ -446,18 +460,23 @@
 <section id="whatIlikep">
 	<div class="container" id="whatIlike">	
 		<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-			<h1>What I Like &amp; Do</h1>
+			<h1>What I Like</h1>
 			<br>
-			<p id="aboutp"> Hello, I'm Mohit Chandra , Third Year Computer Science Undergraduate at IIIT Hyderabad. Currently, I'm pursuing my research in Machine Learning at (ML Lab IIIT-H).</p>
-			<p id="aboutp">
-			I'm a person with variety of interests but still to find my passion. Some of my hobbies
-			</p>
-			<p id="aboutps">
-			Listening Music | Watching Football | Playing Badminton | Cooking | Sketching
-			</p>
-			<p id="aboutps">
-			I believe there's a lot to learn and explore.
-			</p>
+			<p id="likep">Though there's nothing in Computer Science that I don't like but some of my favourite areas are</p>
+		</div>
+		<div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
+			<ul>
+				<li><p id="likep">Artificial Intelligence</p></li>
+				<li><p id="likep">Algorithms</p></li>
+				<li><p id="likep">Theoretical CS</p></li>
+				<li><p id="likep">Operating Systems</p></li>
+				<li><p id="likep">Computer Networks</p></li>
+				<li><p id="likep">Front-End Development</p></li>
+			
+			</ul>	
+		</div>
+		<div class="col-md-5 col-sm-5">
+    	<img class='img-responsive' src='mac.png' height="45%" width="45%" />
 		</div>
 	</div>
 </section>
