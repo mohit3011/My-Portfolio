@@ -53,7 +53,8 @@
 	$(function () {
   $(document).scroll(function () {
     var $nav = $(".navbar-fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height()*5);
+    var $jum = $(".jumbotron");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $jum.height()/2);
   });
 });
 
@@ -62,9 +63,9 @@
 
 <script>
 	$(window).scroll(function(){
-    	var $nav = $(".navbar-fixed-top");
-    	$("#aboutme").css("opacity", 0 + $(this).scrollTop() / 950);
-    	$("#whatIlike").css("opacity", 0 + $(this).scrollTop()/1050 - $nav.height()/102);
+    	var $jum = $(".jumbotron");
+    	$("#aboutme").css("opacity", 0 + $(this).scrollTop() / 900);
+    	$("#whatIlike").css("opacity", 0 + $(this).scrollTop()/1000 - $jum.height()/1250);
 
     	
   });
@@ -304,15 +305,15 @@
 
 	.contact{
 		position: absolute;
-	    left: 45%;
+	    left: -1%;
 	    top: 70%;
 	    bottom: auto;
 	    right: auto;
-	    -webkit-transform: translateX(-70%) translateY(-70%);
-	    -moz-transform: translateX(-70%) translateY(-70%);
-	    -ms-transform: translateX(-70%) translateY(-70%);
-	    -o-transform: translateX(-70%) translateY(-70%);
-	    transform: translateX(-70%) translateY(-70%);
+	    -webkit-transform: translateX(-1%) translateY(-70%);
+	    -moz-transform: translateX(-1%) translateY(-70%);
+	    -ms-transform: translateX(-1%) translateY(-70%);
+	    -o-transform: translateX(-1%) translateY(-70%);
+	    transform: translateX(-1%) translateY(-70%);
 	    font-family: 'Raleway', sans-serif;
 	    text-align: center;
 
@@ -386,8 +387,15 @@
 		opacity: 0;
 	}
 
+	#coim{
+		height: 5vh;
+		width: 5vh;
+	}
 
-
+	#mypic{
+		height: 20vh;
+		width: 20vh;
+	}
 </style>
 </head>
 
@@ -411,7 +419,7 @@
     
     <div class="col-md-4 col-sm-3"></div>
     <div class="col-md-4 col-sm-6" id="pic">
-    	<img class='img-circle' src='img.jpg' height="40%" width="40%" />
+    	<img id="mypic" class='img-circle' src='img.jpg'/>
     </div>
     <div class="col-md-4 col-sm-3"></div>
   </div>
@@ -423,11 +431,11 @@
 
     <div class="contact col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
     <ul id="picco">
-    <li><a href="https://www.quora.com/profile/Mohit-Chandra-10"><img id="coim" class='img-circle' class="img-responsive" src='Quora.png' onmouseover="src='Quora_h.png'" onmouseout="src='Quora.png'" height="5.2%" width="5.2%" /></a> </li>
-    <li><a href="https://www.linkedin.com/in/mohit-chandra-a05508a6/"><img id="coim" class='img-circle' class="img-responsive" src='Linkedin.png' onmouseover="src='Linkedin_h.png'" onmouseout="src='Linkedin.png'" height="5.2%" width="5.2%" /></a> </li>
-    <li><a href="https://github.com/mohit3011"><img id="coim" class='img-circle' class="img-responsive" src='Github.png' onmouseover="src='Github_h.png'" onmouseout="src='Github.png'" height="5.2%" width="5.2%" /></a> </li>
-    <li><a href="https://www.facebook.com/moss3011"><img id="coim" class='img-circle' class="img-responsive" src='Facebook.png' onmouseover="src='Facebook_h.png'" onmouseout="src='Facebook.png'" height="5.2%" width="5.2%" /></a> </li>
-    <li><a href="https://www.instagram.com/mohit__3011/"><img id="coim" class='img-circle' class="img-responsive" src='Instagram.png' onmouseover="src='Instagram_h.png'" onmouseout="src='Instagram.png'" height="5.2%" width="5.2%" /></a> </li>
+    <li><a href="https://www.quora.com/profile/Mohit-Chandra-10"><img id="coim" class='img-circle' class="img-responsive" src='Quora.png' onmouseover="src='Quora_h.png'" onmouseout="src='Quora.png'"/></a> </li>
+    <li><a href="https://www.linkedin.com/in/mohit-chandra-a05508a6/"><img id="coim" class='img-circle' class="img-responsive" src='Linkedin.png' onmouseover="src='Linkedin_h.png'" onmouseout="src='Linkedin.png'"/></a> </li>
+    <li><a href="https://github.com/mohit3011"><img id="coim" class='img-circle' class="img-responsive" src='Github.png' onmouseover="src='Github_h.png'" onmouseout="src='Github.png'"/></a> </li>
+    <li><a href="https://www.facebook.com/moss3011"><img id="coim" class='img-circle' class="img-responsive" src='Facebook.png' onmouseover="src='Facebook_h.png'" onmouseout="src='Facebook.png'"/></a> </li>
+    <li><a href="https://www.instagram.com/mohit__3011/"><img id="coim" class='img-circle' class="img-responsive" src='Instagram.png' onmouseover="src='Instagram_h.png'" onmouseout="src='Instagram.png'"/></a> </li>
     </ul>
     </div>
 
@@ -515,9 +523,10 @@
 
 <section id="skills">
 	<div class="container">
-		<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+		<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 container">
 			<h1>Skills</h1>
-			<img src="graph.png" class="img-responsive" height="100%" width="100%" />
+			<br>
+			<img src="graph.png" class="img-responsive"/>
 		</div>
 	</div>
 </section>
