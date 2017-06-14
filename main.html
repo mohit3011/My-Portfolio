@@ -66,6 +66,9 @@
     	var $jum = $(".jumbotron");
     	$("#aboutme").css("opacity", 0 + $(this).scrollTop() / 900);
     	$("#whatIlike").css("opacity", 0 + $(this).scrollTop()/1000 - $jum.height()/1250);
+    	$("#myworks").css("opacity", 0 + $(this).scrollTop()/1550 - $jum.height()/1150);
+    	$("#skills").css("opacity", 0 + $(this).scrollTop()/2100 - $jum.height()/1100);
+    	$("#touch").css("opacity", 0 + $(this).scrollTop()/1000 - $jum.height()/1250);
 
     	
   });
@@ -244,22 +247,6 @@
 	    text-align: center;
 	}
 
-	.contact{
-		position: absolute;
-	    left: -1%;
-	    top: 70%;
-	    bottom: auto;
-	    right: auto;
-	    -webkit-transform: translateX(-1%) translateY(-70%);
-	    -moz-transform: translateX(-1%) translateY(-70%);
-	    -ms-transform: translateX(-1%) translateY(-70%);
-	    -o-transform: translateX(-1%) translateY(-70%);
-	    transform: translateX(-1%) translateY(-70%);
-	    font-family: 'Raleway', sans-serif;
-	    text-align: center;
-
-
-	}
 
 
 	#pic img {
@@ -274,7 +261,8 @@
 
 	#picco li{
 		display: inline;
-		margin-left: 1%; 
+		margin-left: 4%;
+		margin-bottom: 4%; 
 	}
 
 	#about{
@@ -303,7 +291,7 @@
 
 	.card-title{
 		font-family: 'Raleway', sans-serif;
-		font-size: 4vh;
+		font-size: 3.5vh;
 		text-align: center;
 		color: #1e836c;
 	}
@@ -372,13 +360,16 @@
 	}
 
 	#coim{
-		height: 5vh;
-		width: 5vh;
+		height: 8vh;
+		width: 8vh;
 	}
 
 	#mypic{
 		height: 20vh;
 		width: 20vh;
+	}
+	#contact-info{
+		margin-top : 5%;
 	}
 </style>
 </head>
@@ -412,18 +403,6 @@
     <div class="main col-md-12 col-sm-12" id="tagline">
      Code for Food :D
     </div>
-
-
-    <div class="contact col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-    <ul id="picco">
-    <li><a href="https://www.quora.com/profile/Mohit-Chandra-10"><img id="coim" class='img-circle' class="img-responsive" src='Quora.png' onmouseover="src='Quora_h.png'" onmouseout="src='Quora.png'"/></a> </li>
-    <li><a href="https://www.linkedin.com/in/mohit-chandra-a05508a6/"><img id="coim" class='img-circle' class="img-responsive" src='Linkedin.png' onmouseover="src='Linkedin_h.png'" onmouseout="src='Linkedin.png'"/></a> </li>
-    <li><a href="https://github.com/mohit3011"><img id="coim" class='img-circle' class="img-responsive" src='Github.png' onmouseover="src='Github_h.png'" onmouseout="src='Github.png'"/></a> </li>
-    <li><a href="https://www.facebook.com/moss3011"><img id="coim" class='img-circle' class="img-responsive" src='Facebook.png' onmouseover="src='Facebook_h.png'" onmouseout="src='Facebook.png'"/></a> </li>
-    <li><a href="https://www.instagram.com/mohit__3011/"><img id="coim" class='img-circle' class="img-responsive" src='Instagram.png' onmouseover="src='Instagram_h.png'" onmouseout="src='Instagram.png'"/></a> </li>
-    </ul>
-    </div>
-
 </div>
 
 <!-- About Me Section -->
@@ -435,7 +414,7 @@
 		<div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
 			<h1>About Me</h1>
 			<br>
-			<p id="aboutp"> Hello, I'm Mohit Chandra , Third Year Computer Science Undergraduate at IIIT Hyderabad. Currently, I'm pursuing my research in Machine Learning at (ML Lab IIIT-H).</p>
+			<p id="aboutp"> Hello, I'm Mohit Chandra , Third Year Computer Science Undergraduate at IIIT Hyderabad. Currently, I'm pursuing my research in Machine Learning at (ML Lab IIIT-H) and a team member of IIIT-H Alumni Cell.</p>
 			<p id="aboutp">
 			I'm a person with variety of interests but still to find my passion. Some of my hobbies
 			</p>
@@ -512,8 +491,8 @@
 	        		<div class="row">
 		        		<div class="col-md-12 col-sm-12 card container">
 		        			<div class="card=block">
-		        				<h3 class="card-title">Super Tetris</h3>
-		        				<p class="card-para"> A Tetris Game developed using the Python Pygame Library. <a href="https://github.com/mohit3011/Super-Tetris"><p class="card-para">Link</p></a></p>
+		        				<h3 class="card-title">3-D Block Game</h3>
+		        				<p class="card-para">A 3-D Game made developed using OpenGl.<a href="https://github.com/mohit3011/Super-Tetris"><p class="card-para">Link</p></a></p>
 		        			</div>
 			        	</div>
 			        </div>
@@ -525,6 +504,15 @@
 		        			</div>
 			        	</div>
 			        </div>
+
+			        <div class="row">
+			        	<div class="col-md-12 col-sm-12 card container">
+		        			<div class="card=block">
+		        				<h3 class="card-title">Blogging Website</h3>
+		        				<p class="card-para">A "Quora" like website developed using Django.<a href="https://github.com/mohit3011/django_blog_project"><p class="card-para">Link</p></a></p>
+		        			</div>
+			        	</div>
+			        </div>
 	        	</div>
 
 	        	<div class="col-md-4 col-sm-4 card container">
@@ -533,6 +521,16 @@
 	        				<p class="card-para">It is an AI Bot developed using Alpha-Beta Pruning with Iterative Deepening. This Bot came <b>7th</b> in an AI Bot Competition with <b>85 teams participating</b> in it. <a href="https://github.com/mohit3011/Ultimate_Tic_Tac_toe"><p class="card-para">Link</p></a> </p>
 	        			</div>
 	        	</div>
+
+	        	<div class="col-md-4 col-sm-4 card container">
+	        			<div class="card=block">
+	        				<h3 class="card-title">Fine Grained Data Visualisation</h3>
+	        				<p class="card-para">This project deals with different ways of representation of millions of data set points for extracting useful information. <a href="https://github.com/mohit3011/Fine-Grained-Data-Visualisation"><p class="card-para">Link</p></a> </p>
+	        			</div>
+	        	</div>
+
+
+
 	    </div>
 	    </div>
 	</div>
@@ -543,7 +541,10 @@
 		<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 col-xs-10 col-xs-offset-1 container">
 			<h1>Skills</h1>
 			<br>
-			<img src="graph.png" class="img-responsive"/>
+			<br>
+			<div class="col-md-12 col-sm-12 col-xs-12 container">
+				<img src="graph.png" class="img-responsive"/>
+			</div>
 		</div>
 	</div>
 </section>
@@ -554,7 +555,34 @@
 		<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1 container">
 			<h1>Get In Touch</h1>
 			<br>
-			<img src="stevejobs.jpg" class="img-responsive"/>
+
+			<div id="contact-info" class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 container">
+				<ul id="picco">
+				<li><a href="https://www.quora.com/profile/Mohit-Chandra-10"><img id="coim" class='img-circle' class="img-responsive" src='Quora.png' onmouseover="src='Quora_h.png'" onmouseout="src='Quora.png'"/></a> </li>
+				<li><a href="https://www.linkedin.com/in/mohit-chandra-a05508a6/"><img id="coim" class='img-circle' class="img-responsive" src='Linkedin.png' onmouseover="src='Linkedin_h.png'" onmouseout="src='Linkedin.png'"/></a> </li>
+				<li><a href="https://github.com/mohit3011"><img id="coim" class='img-circle' class="img-responsive" src='Github.png' onmouseover="src='Github_h.png'" onmouseout="src='Github.png'"/></a> </li>
+				<li><a href="https://www.facebook.com/moss3011"><img id="coim" class='img-circle' class="img-responsive" src='Facebook.png' onmouseover="src='Facebook_h.png'" onmouseout="src='Facebook.png'"/></a> </li>
+				<li><a href="https://www.instagram.com/mohit__3011/"><img id="coim" class='img-circle' class="img-responsive" src='Instagram.png' onmouseover="src='Instagram_h.png'" onmouseout="src='Instagram.png'"/></a> </li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6 container">
+					<p id="aboutp"> D-27, OBH, IIIT-Hyderabad, Gachibowli</p>
+				</div> 
+
+				<div class="col-md-6 col-sm-6 col-xs-6 container">
+					<p id="aboutp">mohit.chandra@research.iiit.ac.in</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 container">
+				<img src="stevejobs.jpg" class="img-responsive"/>
+
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 container">
+				<p id="aboutp">Inspired By Steve Jobs and his Design Philosophy.</p>
+			</div>
 		</div>
 	</div>
 </section>
